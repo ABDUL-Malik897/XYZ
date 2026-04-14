@@ -8,6 +8,8 @@ import TodoForm from '../Components/TodoForm';
 import { useTodosContext } from '../Hooks/useTodoContext';
 
 const BASE_URL = process.env.REACT_APP_API_URL
+console.log(BASE_URL);
+
 const Home = () => {
     // const [query ,setQuery] = useState("")
     const {todos , dispatch , search  } = useTodosContext()

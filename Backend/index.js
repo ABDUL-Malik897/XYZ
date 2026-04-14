@@ -9,11 +9,12 @@ DbConnection()
 const port = process.env.PORT || 8080   //* : "always after dotenv.config()"
 
 const todoRouter = require('./routes/todo-routes')
+console.log(process.env.MONGO_URL);
 
 app.use(cors({
     origin: [
         `http://localhost:3000`,
-        "https://todo-list-appln.vercel.app"
+        "https://xyz-nine-mu.vercel.app/"
     ]
 }));
 
