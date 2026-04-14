@@ -69,8 +69,10 @@ header a {
 .loading{
     background-color: #9e9090;
     border-radius: 4px;
-    margin: 120px auto;
-    padding: 20px; 
+    /* margin: 120px;
+    padding: 20px;  */
+    height: 500px;
+    width: 500px;
     position: relative;
     /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }
