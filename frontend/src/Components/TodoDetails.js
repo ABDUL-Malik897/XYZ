@@ -76,7 +76,9 @@ const TodoDetails = ({todo}) => {
                         <input type='checkbox'checked={todo.Completed === true}  onChange={changingStatus}/>
                     </label>
                     </p><br/>
-                    <p>{formatDistaneToNow(new Date (todo.createdAt),{addSuffix : true}) }</p>
+                    <p>{todo.createdAt && (
+                            formatDistaneToNow(new Date(todo.createdAt), { addSuffix: true })
+                        )}</p>
                     </>
             )}
             <span onClick={() =>setUpdation(true)} className='editing material-symbols-outlined'>edit</span>
