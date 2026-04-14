@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
@@ -13,9 +13,11 @@ console.log(BASE_URL);
 const Home = () => {
     // const [query ,setQuery] = useState("")
     const {todos , dispatch , search  } = useTodosContext()
+    const [loading ,setLoading] = useState(false)
     useEffect(() => {
         const fetchTODOs = async () => {
             try {
+                setLoading(true)
                 let url = `${BASE_URL}/api/todos`;
 
                 if (search) {
@@ -26,7 +28,7 @@ const Home = () => {
                 dispatch({ type: 'SET_TODO', payload: response.data.data});
                 } catch (err) {
                 console.log(err);
-                }
+                } finally{setLoading(false)}
         };
         fetchTODOs()
     },[dispatch,search])
@@ -34,7 +36,10 @@ const Home = () => {
     return (
         <div className='home'>
             <div className='todos'>
-                {todos && todos.length === 0 ? (
+                {loading ? (
+                    <div className='loading'></div>   
+                ) :
+                todos && todos.length === 0 ? (
                     <p className="error">No todo found</p>
                     ) : (
                     Array.isArray(todos) && todos.map((todo) => (

@@ -66,6 +66,14 @@ header a {
 .todos > * {
     direction: ltr;
 }
+.loading{
+    background-color: #726d6d;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 20px; 
+    position: relative;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+}
 .todo-details{
     background-color: #fff;
     border-radius: 4px;
