@@ -7,6 +7,9 @@ const router  = express.Router()
 
 router.get('/',getAllTodos)
 
+//? SEARCH 
+
+router.get("/search", searchTodos);
 
 //? GET (by id)
 
@@ -26,10 +29,5 @@ router.put('/:id',updateTodoById)
 //? DELETE 
 
 router.delete('/:id',deleteTodoById)
-
-//? SEARCH 
-
-router.get("/search", searchTodos);
-
 
 module.exports = router;
