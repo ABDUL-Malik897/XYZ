@@ -20,38 +20,36 @@ This is a full-stack To-Do List application that allows users to create, update,
 
 Used to make HTTP requests (GET, POST, etc.) to communicate with backend APIs.
 
->> npm i date-fns
+> npm i date-fns
 
 Provides simple utilities to format, parse, and manipulate dates.
 
->> npm i react-router-dom
+> npm i react-router-dom
 
 Enables navigation and routing between different pages in a React app.
 
 
 #### Backend
 
->> npm i cors
+> npm i cors
 
 Allows frontend and backend to communicate across different origins (domains).
 
->> npm i dotenv
+> npm i dotenv
 
 Loads environment variables from a .env file into your application.
 
->> npm i express
+> npm i express
 
 Lightweight framework to build APIs and handle server-side logic.
 
->> npm i mongoDB
+> npm i mongoDB
 
 NoSQL database used to store application data in JSON-like format.
 
->> npm i mongoose
+> npm i mongoose
 
 ODM library to define schemas and interact with MongoDB easily.
-
- 
 
 ---
 
@@ -112,6 +110,7 @@ if (window.confirm(`Do you want to delete ${todo.Title}`)) {
 ### 4. Scroll Not Working Properly
 
 **Problem:** Task list overflow issue.
+
 **Solution:** Applied CSS:
 
 ```css
@@ -124,6 +123,7 @@ max-height: 300px;
 ### 5. Deployment Confusion
 
 **Problem:** Changes not reflecting after updates.
+
 **Solution:** Learned that backend must be **re-deployed after every change**, not just committed.
 
 
