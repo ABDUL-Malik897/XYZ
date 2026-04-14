@@ -22,7 +22,7 @@ const TodoForm = () => {
         setTitle('')
         setContent('')
         setCompleted(false)
-        dispatch({type : 'CREATE_TODO', payload : response.data.CreatedTodo })
+        dispatch({type : 'CREATE_TODO', payload : response.data.data })
         }catch(err){
             setError(err.response?.data?.message)
         }

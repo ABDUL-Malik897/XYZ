@@ -23,7 +23,7 @@ const Home = () => {
                 }
                 const response = await axios.get(url);
                 console.log(response.data)
-                dispatch({ type: 'SET_TODO', payload: [response.data.data] });
+                dispatch({ type: 'SET_TODO', payload: response.data.data});
                 } catch (err) {
                 console.log(err);
                 }
