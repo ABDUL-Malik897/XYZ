@@ -53,6 +53,23 @@ ODM library to define schemas and interact with MongoDB easily.
 
 ---
 
+
+## To Start the Project
+
+### In Backend
+
+    cd Backend
+    npm i
+    npm run dev
+
+### In Frontend
+
+     cd frontend
+     npm i
+     npm start
+
+    
+---
 ##  Features
 
 * Add new tasks
